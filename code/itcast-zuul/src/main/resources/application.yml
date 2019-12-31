@@ -1,0 +1,20 @@
+
+server:
+  port: 10010 #\u670D\u52A1\u7AEF\u53E3
+spring:
+  application:
+    name: itcast-zuul #\u6307\u5B9A\u670D\u52A1\u540D
+zuul:
+  routes:
+    service-provider: /service-provider/** # \u8FD9\u91CC\u662F\u6620\u5C04\u8DEF\u5F84
+    service-consumer: /service-consumer/**
+  prefix: /api # \u6DFB\u52A0\u8DEF\u7531\u524D\u7F00
+#      path: /service-provider/** # \u8FD9\u91CC\u662F\u6620\u5C04\u8DEF\u5F84
+#      serviceId: service-provider # \u6307\u5B9A\u670D\u52A1\u540D\u79F0
+#      url: http://127.0.0.1:8081 # \u6620\u5C04\u8DEF\u5F84\u5BF9\u5E94\u7684\u5B9E\u9645url\u5730\u5740
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5 # \u83B7\u53D6\u670D\u52A1\u5217\u8868\u7684\u5468\u671F\uFF1A5s
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka

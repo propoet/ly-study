@@ -2,7 +2,7 @@ package com.itcast.springboot.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "jdbc")
+@ConfigurationProperties(prefix = "jdbc")// 声明一个类是属性读取类
 public class JdbcProperties {
 	private String url;
 	private String driverClassName;
